@@ -1,13 +1,11 @@
 package com.example.lab11parta_cameraapp;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.camera.core.Camera;
+
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageCaptureException;
@@ -16,21 +14,21 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
+
+import androidx.exifinterface.media.ExifInterface;
 import androidx.lifecycle.LifecycleOwner;
 
 import android.Manifest;
-import android.content.Context;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.ExifInterface;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
+
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private String TAG = "MainAct";
     //path to image file
     private String currentPhotoPath;
-    //UI Componants
+    //UI Components
     private FloatingActionButton fab;
     private PreviewView previewView;
     //Camera objects
